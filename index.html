@@ -4,154 +4,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>파티해월 | 출장 상차림</title>
-  <meta name="description" content="돌잔치 · 웨딩 · 어르신 잔치 출장 상차림. 전통상/꽃상/포토테이블/포토존 구성 및 가격 안내." />
+  <meta name="description" content="돌잔치 · 웨딩 · 어르신 잔치 출장 상차림 안내" />
 
   <style>
     :root{
       --bg:#0b0c10;
       --card:#12141b;
-      --muted:#a9b0bd;
       --text:#f4f6fb;
+      --muted:#a9b0bd;
       --line:#242836;
       --accent:#ffcc66;
-      --accent2:#7dd3fc;
-      --pill:#1a1f2b;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 980px;
+      --radius:18px;
+      --max:980px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,.12), transparent 55%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(255,204,102,.10), transparent 55%),
-                  var(--bg);
+      background:var(--bg);
       color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
-      line-height:1.55;
+      font-family: system-ui, -apple-system, "Noto Sans KR", Arial, sans-serif;
+      line-height:1.6;
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:18px 14px 40px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px; padding:10px 2px 16px;
+    .wrap{max-width:var(--max); margin:0 auto; padding:16px 14px 40px}
+    .top{
+      display:flex; justify-content:space-between; align-items:center;
+      gap:10px; padding:6px 2px 12px;
     }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-    }
+    .brand{display:flex; align-items:center; gap:10px}
     .logo{
-      width:40px; height:40px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(255,204,102,.25), rgba(125,211,252,.18));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow: var(--shadow);
-      display:grid; place-items:center;
-      font-weight:900;
-      letter-spacing:-.5px;
+      width:38px; height:38px; border-radius:14px;
+      background:#1a1f2b; border:1px solid rgba(255,255,255,.08);
+      display:grid; place-items:center; font-weight:900;
     }
-    .brand h1{margin:0; font-size:15px; font-weight:800}
+    .brand h1{margin:0; font-size:15px; font-weight:900}
     .brand p{margin:0; font-size:12px; color:var(--muted)}
     .pill{
-      padding:9px 12px; border-radius:999px;
-      background: rgba(26,31,43,.7);
-      border:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
-      font-size:12px;
-      display:flex; gap:8px; align-items:center;
+      font-size:12px; color:var(--muted);
+      padding:8px 10px; border-radius:999px;
+      background:#1a1f2b; border:1px solid rgba(255,255,255,.08);
       white-space:nowrap;
     }
-    .dot{width:7px; height:7px; border-radius:50%; background:var(--accent)}
+
     .card{
-      background: rgba(18,20,27,.78);
+      background:var(--card);
       border:1px solid rgba(255,255,255,.08);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
+      border-radius:var(--radius);
+      padding:16px;
+      margin:12px 0;
     }
-    .hero{padding:18px 16px}
-    .kicker{
-      display:flex; gap:8px; flex-wrap:wrap; align-items:center;
-      margin-bottom:10px;
-    }
-    .tag{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      background: rgba(26,31,43,.9);
-      border:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
-    }
-    .tag strong{color:var(--text)}
-    .title{
-      margin:0 0 10px 0;
-      font-size:22px;
-      font-weight:900;
-      letter-spacing:-.6px;
-      line-height:1.25;
-    }
-    .subtitle{
-      margin:0 0 14px 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .ctaRow{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-top:14px;
-    }
+    .title{margin:0 0 8px; font-size:22px; font-weight:950; letter-spacing:-.6px; line-height:1.25}
+    .sub{margin:0; color:var(--muted); font-size:13px}
+
+    .btnRow{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap}
     .btn{
       flex:1 1 140px;
-      display:flex; align-items:center; justify-content:center;
-      gap:8px;
+      text-align:center;
       padding:12px 12px;
       border-radius:14px;
+      background:#1a1f2b;
       border:1px solid rgba(255,255,255,.10);
-      background: rgba(26,31,43,.85);
-      font-weight:800;
-      font-size:13px;
+      font-weight:900;
+      color:var(--text);
+      text-decoration:none;
     }
     .btn.primary{
-      background: linear-gradient(135deg, rgba(255,204,102,.22), rgba(125,211,252,.14));
       border-color: rgba(255,204,102,.35);
-    }
-    .btn small{font-weight:700; color:var(--muted)}
-    .grid{
-      display:grid;
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (min-width: 720px){
-      .grid.cols2{grid-template-columns: 1fr 1fr}
-      .grid.cols3{grid-template-columns: 1fr 1fr 1fr}
-    }
-    .sectionTitle{
-      margin:18px 2px 10px;
-      font-size:14px;
-      font-weight:900;
-      letter-spacing:-.2px;
-      display:flex; align-items:center; justify-content:space-between;
-      color:var(--text);
-    }
-    .sectionTitle span{color:var(--muted); font-weight:700; font-size:12px}
-    .item{
-      padding:14px 14px 12px;
-    }
-    .item h3{
-      margin:0 0 6px 0;
-      font-size:14px;
-      font-weight:900;
-      letter-spacing:-.2px;
-    }
-    .item p{
-      margin:0;
-      color:var(--muted);
-      font-size:12.5px;
+      box-shadow: 0 0 0 2px rgba(255,204,102,.08) inset;
     }
 
-    /* Image card */
-    .imgCard{
+    .section{
+      margin-top:16px;
+      display:flex; justify-content:space-between; align-items:baseline;
+      padding:0 2px;
+    }
+    .section h2{margin:0; font-size:14px; font-weight:950}
+    .section span{font-size:12px; color:var(--muted)}
+
+    .photoCard{
       display:grid;
       grid-template-columns: 110px 1fr;
       gap:12px;
-      padding:12px;
       align-items:center;
     }
     .thumb{
@@ -161,249 +93,136 @@
       border:1px solid rgba(255,255,255,.08);
       background:#0f1117;
     }
-    .thumb img{
-      width:100%; height:100%;
-      object-fit:cover;
-      display:block;
-    }
-    .imgCard h4{
-      margin:0 0 4px;
-      font-size:13px;
-      font-weight:900;
-      letter-spacing:-.2px;
-    }
-    .imgCard .meta{
-      margin:0;
-      color:var(--muted);
-      font-size:12px;
-    }
+    .thumb img{width:100%; height:100%; object-fit:cover; display:block}
+    .pTitle{margin:0 0 4px; font-size:13px; font-weight:950}
+    .pMeta{margin:0; font-size:12px; color:var(--muted)}
 
-    /* Price cards */
-    .price{
-      padding:14px;
-    }
-    .priceTop{
-      display:flex; justify-content:space-between; align-items:flex-start; gap:10px;
-      margin-bottom:8px;
-    }
-    .priceTop h3{
-      margin:0;
-      font-size:14px; font-weight:900;
-    }
-    .badge{
-      font-size:11px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(26,31,43,.85);
-      color:var(--muted);
-      white-space:nowrap;
-    }
-    .amount{
-      font-size:18px;
-      font-weight:950;
-      margin:6px 0 10px;
-      letter-spacing:-.4px;
-    }
-    .list{
-      margin:0; padding:0;
-      list-style:none;
-      display:grid; gap:6px;
-      color:var(--muted);
-      font-size:12.5px;
-    }
-    .list li{
-      display:flex; gap:8px;
-      align-items:flex-start;
-    }
-    .check{
-      width:18px; height:18px;
-      border-radius:6px;
-      background: rgba(125,211,252,.12);
-      border:1px solid rgba(125,211,252,.25);
-      display:grid; place-items:center;
-      flex:0 0 auto;
-      margin-top:1px;
-      color:var(--accent2);
-      font-weight:900;
-      font-size:12px;
-    }
+    .line{height:1px; background:rgba(255,255,255,.06); margin:12px 0}
 
-    /* Info blocks */
-    .note{
-      padding:14px;
-      display:grid;
-      gap:10px;
-    }
-    .noteBox{
-      padding:12px 12px;
-      border-radius:14px;
-      background: rgba(26,31,43,.55);
-      border:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
-      font-size:12.5px;
-    }
-    .noteBox strong{color:var(--text)}
-    .divider{height:1px; background: rgba(255,255,255,.06); margin:12px 0}
-    footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:12px;
-      text-align:center;
-      opacity:.9;
-    }
-    .tiny{font-size:11px; color:var(--muted)}
+    .list{margin:0; padding-left:18px; color:var(--muted); font-size:12.5px}
+    footer{margin-top:18px; text-align:center; color:var(--muted); font-size:12px}
   </style>
 </head>
 
 <body>
   <div class="wrap">
-
-    <div class="topbar">
+    <!-- 상단 -->
+    <div class="top">
       <div class="brand">
         <div class="logo">H</div>
         <div>
           <h1>파티해월</h1>
-          <p>돌잔치 · 웨딩 · 어르신 잔치 출장 상차림</p>
+          <p>출장 상차림 안내</p>
         </div>
       </div>
-      <div class="pill"><span class="dot"></span> 부산/경남 출장 가능</div>
+      <div class="pill">부산/경남 출장</div>
     </div>
 
-    <!-- HERO -->
-    <section class="card hero">
-      <div class="kicker">
-        <div class="tag"><strong>감성</strong> 상차림</div>
-        <div class="tag">현장 셋팅</div>
-        <div class="tag">사진 맛집</div>
+    <!-- 메인 소개 -->
+    <div class="card">
+      <h2 class="title">돌잔치 · 웨딩 · 어르신 잔치<br/>감성 상차림</h2>
+      <p class="sub">전통상 / 꽃상 / 포토테이블 / 포토존 구성</p>
+
+      <div class="btnRow">
+        <!-- 카톡 링크 -->
+        <a class="btn primary" href="https://open.kakao.com/" target="_blank" rel="noopener">💬 카톡 상담</a>
+        <!-- 전화번호 -->
+        <a class="btn" href="tel:010-0000-0000">📞 전화 문의</a>
       </div>
+    </div>
 
-      <h2 class="title">한 번 차리면<br/>그날 주인공은 상차림이더라</h2>
-      <p class="subtitle">
-        전통상 · 꽃상 · 포토테이블 · 포토존까지 한 번에.  
-        행사 성격/예산에 맞춰 깔끔하게 구성해드려요.
-      </p>
+    <!-- 사진 섹션 -->
+    <div class="section">
+      <h2>대표 사진</h2>
+      <span>3컷</span>
+    </div>
 
-      <div class="ctaRow">
-        <!-- 형아 카톡 링크로 바꾸고 싶으면, 아래 href만 카톡 오픈채팅/채널 링크로 -->
-        <a class="btn primary" href="https://open.kakao.com/" target="_blank" rel="noopener">
-          💬 카톡 상담하기
-        </a>
-        <!-- 전화번호 바꾸기 -->
-        <a class="btn" href="tel:010-0000-0000">
-          📞 전화 문의 <small>010-0000-0000</small>
-        </a>
+    <div class="card photoCard">
+      <div class="thumb">
+        <!-- ✅ 여기 사진1 URL -->
+        <img src="https://images.unsplash.com/photo-1528821154947-1aa3d1c3c1d5?auto=format&fit=crop&w=1200&q=70" alt="전통상">
       </div>
-    </section>
-
-    <!-- 대표 사진 카드 3개 (캡쳐처럼 중간에 사진카드가 반복되는 느낌) -->
-    <div class="sectionTitle">대표 구성 사진 <span>3컷</span></div>
-    <section class="grid">
-      <div class="card imgCard">
-        <div class="thumb">
-          <!-- ✅ 여기에 형아 사진 URL 1 넣기 -->
-          <img src="https://images.unsplash.com/photo-1528821154947-1aa3d1c3c1d5?auto=format&fit=crop&w=1200&q=70" alt="전통상" />
-        </div>
-        <div>
-          <h4>전통상 / 돌상</h4>
-          <p class="meta">톤 맞춰 깔끔하게 · 촬영 각도 고려</p>
-        </div>
+      <div>
+        <p class="pTitle">전통상 / 돌상</p>
+        <p class="pMeta">톤 맞춰 깔끔하게 · 촬영 각도 고려</p>
       </div>
+    </div>
 
-      <div class="card imgCard">
-        <div class="thumb">
-          <!-- ✅ 여기에 형아 사진 URL 2 넣기 -->
-          <img src="https://images.unsplash.com/photo-1528823872057-9c018a7b6a3b?auto=format&fit=crop&w=1200&q=70" alt="꽃상" />
-        </div>
-        <div>
-          <h4>꽃상 / 연출형</h4>
-          <p class="meta">공간 분위기 확 바뀌는 스타일</p>
-        </div>
+    <div class="card photoCard">
+      <div class="thumb">
+        <!-- ✅ 여기 사진2 URL -->
+        <img src="https://images.unsplash.com/photo-1528823872057-9c018a7b6a3b?auto=format&fit=crop&w=1200&q=70" alt="꽃상">
       </div>
-
-      <div class="card imgCard">
-        <div class="thumb">
-          <!-- ✅ 여기에 형아 사진 URL 3 넣기 -->
-          <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1200&q=70" alt="포토존" />
-        </div>
-        <div>
-          <h4>포토테이블 / 포토존</h4>
-          <p class="meta">현장 동선 + 사진 구도까지 잡아드림</p>
-        </div>
+      <div>
+        <p class="pTitle">꽃상 / 연출형</p>
+        <p class="pMeta">공간 분위기 확 바뀌는 스타일</p>
       </div>
-    </section>
+    </div>
 
-    <!-- 가격 안내 (캡쳐처럼 카드형으로 길게) -->
-    <div class="sectionTitle">가격 안내 <span>기본/추천</span></div>
-    <section class="grid cols2">
-      <div class="card price">
-        <div class="priceTop">
-          <h3>베이직</h3>
-          <div class="badge">가성비</div>
-        </div>
-        <div class="amount">￦ 00만원 ~</div>
-        <ul class="list">
-          <li><span class="check">✓</span> 기본 상차림 + 소품 구성</li>
-          <li><span class="check">✓</span> 현장 셋팅/정리</li>
-          <li><span class="check">✓</span> 공간/컨셉 상담</li>
-        </ul>
-        <div class="divider"></div>
-        <div class="tiny">※ 거리/구성에 따라 변동</div>
+    <div class="card photoCard">
+      <div class="thumb">
+        <!-- ✅ 여기 사진3 URL -->
+        <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1200&q=70" alt="포토존">
       </div>
-
-      <div class="card price">
-        <div class="priceTop">
-          <h3>프리미엄</h3>
-          <div class="badge" style="border-color: rgba(255,204,102,.25);">추천</div>
-        </div>
-        <div class="amount">￦ 00만원 ~</div>
-        <ul class="list">
-          <li><span class="check">✓</span> 전통상/꽃상 업그레이드</li>
-          <li><span class="check">✓</span> 포토테이블 + 포토존 연출</li>
-          <li><span class="check">✓</span> 촬영 포인트 구성</li>
-        </ul>
-        <div class="divider"></div>
-        <div class="tiny">※ 행사 성격에 맞춰 커스텀 가능</div>
+      <div>
+        <p class="pTitle">포토테이블 / 포토존</p>
+        <p class="pMeta">현장 동선 + 사진 구도까지 잡아드림</p>
       </div>
-    </section>
+    </div>
 
-    <!-- 진행 순서 -->
-    <div class="sectionTitle">진행 순서 <span>간단</span></div>
-    <section class="card item">
-      <h3>1) 상담</h3>
-      <p>날짜/장소/행사 종류/예산/원하는 분위기만 알려주면 구성 잡아드려요.</p>
-      <div class="divider"></div>
-      <h3>2) 구성 확정</h3>
-      <p>전통상·꽃상·포토존 여부와 색감/소품 방향 확정.</p>
-      <div class="divider"></div>
-      <h3>3) 현장 셋팅</h3>
-      <p>시간 맞춰 방문 → 셋팅 → 행사 끝나면 정리까지.</p>
-    </section>
+    <!-- 가격 -->
+    <div class="section">
+      <h2>가격 안내</h2>
+      <span>예시</span>
+    </div>
 
-    <!-- 안내/주의 -->
-    <div class="sectionTitle">안내사항 <span>필독</span></div>
-    <section class="card note">
-      <div class="noteBox"><strong>예약</strong>은 행사일 기준 여유 있게 잡는 게 좋아요. (성수기 빠름)</div>
-      <div class="noteBox"><strong>장소</strong> (호텔/식당/가정) 사진 보내주면 공간에 맞게 세팅 제안 가능</div>
-      <div class="noteBox"><strong>출장비</strong>는 지역/거리 기준으로 안내</div>
-    </section>
+    <div class="card">
+      <p class="pTitle">베이직</p>
+      <p class="sub">￦ 00만원 ~</p>
+      <div class="line"></div>
+      <ul class="list">
+        <li>기본 상차림 + 소품 구성</li>
+        <li>현장 셋팅/정리</li>
+        <li>공간/컨셉 상담</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p class="pTitle">프리미엄</p>
+      <p class="sub">￦ 00만원 ~</p>
+      <div class="line"></div>
+      <ul class="list">
+        <li>전통상/꽃상 업그레이드</li>
+        <li>포토테이블 + 포토존 연출</li>
+        <li>촬영 포인트 구성</li>
+      </ul>
+    </div>
+
+    <!-- 안내 -->
+    <div class="section">
+      <h2>안내사항</h2>
+      <span>필독</span>
+    </div>
+
+    <div class="card">
+      <ul class="list">
+        <li>예약은 행사일 기준 여유 있게</li>
+        <li>장소 사진 보내주면 구성 더 정확</li>
+        <li>출장비는 지역/거리 기준 안내</li>
+      </ul>
+    </div>
 
     <!-- 하단 CTA -->
-    <div class="sectionTitle">바로 문의 <span>빠르게</span></div>
-    <section class="card hero">
-      <h2 class="title" style="font-size:18px;">형아, 날짜만 던져줘도<br/>구성부터 잡아줄게요 😄</h2>
-      <p class="subtitle">카톡으로 “날짜/장소/행사종류” 3가지만 보내주면 끝.</p>
-      <div class="ctaRow">
-        <a class="btn primary" href="https://open.kakao.com/" target="_blank" rel="noopener">💬 카톡으로 바로 상담</a>
-        <a class="btn" href="tel:010-0000-0000">📞 전화로 빠른 문의</a>
+    <div class="card">
+      <p class="pTitle">바로 문의</p>
+      <p class="sub">카톡으로 “날짜/장소/행사종류”만 보내주면 끝!</p>
+      <div class="btnRow">
+        <a class="btn primary" href="https://open.kakao.com/" target="_blank" rel="noopener">💬 카톡 상담</a>
+        <a class="btn" href="tel:010-0000-0000">📞 전화 문의</a>
       </div>
-    </section>
+    </div>
 
-    <footer>
-      © 파티해월 · 출장 상차림<br/>
-      <span class="tiny">상호/사업자정보는 필요하면 여기에 추가</span>
-    </footer>
-
+    <footer>© 파티해월</footer>
   </div>
 </body>
 </html>
